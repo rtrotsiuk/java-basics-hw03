@@ -9,6 +9,14 @@ public class Student {
     Student student1 = new Student("Student 1", 20);
     Student student2 = new Student();
     Student student3 = new Student("Student 2", 23);
+    /*
+     * 1. Display the average rating;
+     * 2. Change the rating;
+     * 3. Display the new average rating;
+     */
+    System.out.println(getAvgRating());
+    student1.changeRating(878);
+    System.out.println(getAvgRating());
   }
 
   public Student() {
@@ -23,6 +31,7 @@ public class Student {
   public Student(String name, int rating) {
     this.name = name;
     this.rating = rating;
+    ratingSum += rating;
     count++;
   }
 
